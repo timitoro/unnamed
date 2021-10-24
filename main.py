@@ -18,6 +18,14 @@ import copy
 print('Введите количество доступных единиц техники')
 Mach = int(input())
 
+print('Введите количество осадков(от 1 до 10)')
+prototype = int(input())
+
+print('Введите количество итераций(чем выше количество итераций, тем выше точность построения пути)')
+Iter = int(input())
+Iter = Iter-1
+Iter = Iter*50+1
+
 """
 def xy():
     li = []
@@ -249,7 +257,7 @@ if __name__ == '__main__':
     population = init_population(len(locations), 90)
 
     t = []
-    for i in range(1001):
+    for i in range(Iter):
         # selection
         
         value = fitness(population, DMAT, break_points, aimFunction)
