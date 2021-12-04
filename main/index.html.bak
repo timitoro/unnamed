@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Сайт на StepkinBlog.ru</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="blok-menu">
+<ul class="menu">
+<li><a href="index.html">тут чет точно надо будет присрать я не знаю что</a></li>
+<li><a href="rabota.html">потом пригодится короче</a></li>
+<li><a href="prais.html">спать хочу блять</a></li>
+<li><a href="contakt.html">Контакты</a></li>
+</ul>
+</div>
+
+
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'ZonaA')">Зона А</button>
+  <button class="tablinks" onclick="openCity(event, 'ZonaB')">Зона Б</button>
+  <button class="tablinks" onclick="openCity(event, 'ZonaV')">Зона В</button>
+</div>
+<!--вот тут мы объявляем что у нас есть 3 зоны. По нормальному нам тут нужно из sql подгружать количество исходя из данных.
+это дрочево ебейшее, но надо сделать я мб смогу или сам посмотри как это делается -->
+<!-- Tab content -->
+<div id="ZonaA" class="tabcontent">
+  <h3>Зона А</h3>
+  <p>Тут про зону а
+  еще комментарий короче надо делать все под одно расширешие экрана ибо на условно другом монике может все поплыть</p>
+</div>
+
+<div id="ZonaB" class="tabcontent">
+  <h3>Зона Б</h3>
+  <p>Тут про зону б</p>
+</div>
+
+<div id="ZonaV" class="tabcontent">
+  <h3>Зона В</h3>
+  <p>Тут про зону в</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
